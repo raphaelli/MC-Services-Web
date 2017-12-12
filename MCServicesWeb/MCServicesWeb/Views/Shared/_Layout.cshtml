@@ -1,45 +1,67 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
+    <title>@ViewBag.Title - | Powered by MCSW</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <!--[if lte IE 8]><script src="../../Scripts/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="../../Content/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="../../Content/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="../../Content/ie9.css" /><![endif]-->
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("应用程序名称", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("主页", "Index", "Home")</li>
-                    <li>@Html.ActionLink("关于", "About", "Home")</li>
-                    <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+<body class="landing">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">MiKa Craft</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="#">服务器展示</a></li>
+                                <li><a href="http://mikamc.mdzz2333.cn:8123" target="_blank">卫星地图</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
+            </nav>
+        </header>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</p>
+        <!-- Footer -->
+        <footer id="footer">
+            <!--<ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+                <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+            </ul>-->
+            <ul class="copyright">
+                <li>@DateTime.Now.Year &copy; MCSW </li>
+                <li>Design: <a href="https://ns96.com" target="_blank">MuZi</a></li>
+            </ul>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <!-- Scripts -->
+    <script src="../../Scripts/jquery.min.js"></script>
+    <script src="../../Scripts/jquery.scrollex.min.js"></script>
+    <script src="../../Scripts/jquery.scrolly.min.js"></script>
+    <script src="../../Scripts/skel.min.js"></script>
+    <script src="../../Scripts/util.js"></script>
+    <!--[if lte IE 8]><script src="../../Scripts/ie/respond.min.js"></script><![endif]-->
+    <script src="../../Scripts/main.js"></script>
 </body>
 </html>
