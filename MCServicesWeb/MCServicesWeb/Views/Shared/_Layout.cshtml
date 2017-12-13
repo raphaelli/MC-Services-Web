@@ -8,10 +8,7 @@
     <title>@ViewBag.Title - | Powered by MCSW</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <!--[if lte IE 8]><script src="../../Scripts/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="../../Content/main.css" />
-    <!--[if lte IE 8]><link rel="stylesheet" href="../../Content/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="../../Content/ie9.css" /><![endif]-->
+
 </head>
 <body class="landing">
     <!-- Page Wrapper -->
@@ -55,15 +52,8 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/main")
     @RenderSection("scripts", required: false)
 
-    <!-- Scripts -->
-    <script src="../../Scripts/jquery.min.js"></script>
-    <script src="../../Scripts/jquery.scrollex.min.js"></script>
-    <script src="../../Scripts/jquery.scrolly.min.js"></script>
-    <script src="../../Scripts/skel.min.js"></script>
-    <script src="../../Scripts/util.js"></script>
-    <!--[if lte IE 8]><script src="../../Scripts/ie/respond.min.js"></script><![endif]-->
-    <script src="../../Scripts/main.js"></script>
 </body>
 </html>
