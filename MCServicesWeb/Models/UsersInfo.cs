@@ -33,6 +33,6 @@ namespace MCServicesWeb.Models
 
     public class UsersDBContext : DbContext
     {
-        public DbSet<UsersInfo> Users { get; set; }
+        public DbSet<UsersInfo> UsersInfo { get; set; }
     }
 }
