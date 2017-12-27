@@ -13,3 +13,4 @@
 - 2017/12/13 前台页面页面迁移,配置BandleConfig
 - 2017/12/14 完成页面基础布局和设计，配置登陆及权限 笔记[ASP.NET MVC项目笔记](https://ns96.com/2017/12/13/aspdotnet-note/)
 - 2017/12/16 SQL部分 [E-R图笔记](https://ns96.com/2017/12/17/sql-er/)
+- 2017/12/18 SQL-Oracle部分完成
