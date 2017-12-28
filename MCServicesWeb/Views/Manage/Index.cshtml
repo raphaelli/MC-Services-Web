@@ -3,7 +3,6 @@
     ViewBag.Title = "管理";
 }
 
-<h2>@ViewBag.Title。</h2>
 <article id="main">
 <header>
     <h2>@ViewBag.Title.</h2>
@@ -21,29 +20,34 @@
         <dd>
             [
             @if (Model.HasPassword)
-            {
-                @Html.ActionLink("更改密码", "ChangePassword")
-            }
-            else
-            {
-                @Html.ActionLink("创建", "SetPassword")
-            }
+        {
+            @Html.ActionLink("更改密码", "ChangePassword")
+    }
+    else
+    {
+        @Html.ActionLink("创建", "SetPassword")
+}
             ]
         </dd>
-        <dt>外部登录名:</dt>
-        <dd>
-            @Model.Logins.Count [
-            @Html.ActionLink("管理", "ManageLogins") ]
-        </dd>
+
+        <dt>账户余额</dt>
+        <dd>0 @Html.ActionLink("充值", "charge")</dd>
+
+        <dt>白名单状态：</dt>
+        <dd>未在白名单 @Html.ActionLink("申请", "apply")</dd>
+        
+        
+
+
         @*
             电话号码可以用作双因素身份验证系统中的第二个验证因素。
-             
+
              有关如何设置此 ASP.NET 应用程序以支持使用
                 SMS 进行双因素身份验证的详细信息，请参阅<a href="https://go.microsoft.com/fwlink/?LinkId=403804">此文章</a>。
-             
+
              在设置双因素身份验证后，取消注释以下块
-        *@
-        @*  
+            *@
+            @*
             <dt>电话号码:</dt>
             <dd>
                 @(Model.PhoneNumber ?? "None")
@@ -62,42 +66,11 @@
                     <text>[&nbsp;&nbsp;@Html.ActionLink("Add", "AddPhoneNumber")
                 }
             </dd>
-        *@
-        <dt>双因素身份验证:</dt>
-        <dd>
-            <p>
-                未配置任何双因素身份验证提供程序。若要了解如何设置此 ASP.NET 应用程序以支持
-                双因素身份验证的详细信息，请参阅<a href="https://go.microsoft.com/fwlink/?LinkId=403804">此文章</a>。
-            </p>
-            @*@if (Model.TwoFactor)
-                {
-                    using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <text>已启用
-                        <input type="submit" value="禁用" class="btn btn-link" />
-                        </text>
-                    }
-                }
-                else
-                {
-                    using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <text>已禁用
-                        <input type="submit" value="启用" class="btn btn-link" />
-                        </text>
-                    }
-                }*@
-        </dd>
+            *@
+
     </dl>
 </div>
             </section>
         </div>
-
-        </div>
-
-    </section>
-    </div>
     </section>
 </article>

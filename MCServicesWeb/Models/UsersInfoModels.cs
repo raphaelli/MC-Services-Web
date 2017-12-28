@@ -7,7 +7,7 @@ using System.Web;
 
 namespace MCServicesWeb.Models
 {
-    public class UsersInfo
+    public class UsersInfoModels
     {
         public int UsersId { get; set; }
 
@@ -33,6 +33,6 @@ namespace MCServicesWeb.Models
 
     public class UsersDBContext : DbContext
     {
-        public DbSet<UsersInfo> UsersInfo { get; set; }
+        public DbSet<UsersInfoModels> UsersInfo { get; set; }
     }
 }
